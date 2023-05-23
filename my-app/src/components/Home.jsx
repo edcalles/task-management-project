@@ -1,17 +1,12 @@
 import React from 'react';
 
 const Home = () => {
-    var style = {
-        display: "flex",
-        height: 200,
-        minWidth: 960
-    };
     return (
-        <div style={style}>
+        <div>
+            <h3>Home</h3>
             <div>
-                Hello World
+                Welcome to my task-management app!
             </div>
-
         </div>
     )
 }

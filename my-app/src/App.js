@@ -1,56 +1,21 @@
-import React, { Component } from 'react';
-import { render } from 'react-dom';
-import { BrowserRouter as Router, Route, Routes, Link, Switch, redirect } from 'react-router-dom';
+import './index.css';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
+import Navbar from  "./components/Navbar";
+import Home from "./components/Home";
+import Todo from "./components/Todo";
+import Contact from "./components/Contact";
 
-
-import Home from "./components/Home"
-import Todo from "./components/Todo"
-import Contact from "./components/Contact"
-
-class App extends Component {
-    constructor() {
-        super();
-        this.state = {
-            name: "React",
-            isUserAuthenticated: true
-        };
-    }
-    render() {
-        return (
-            <div>
-                <Router>
-                    <div>
-                        <ul>
-                            <li>
-                                <Link to="/">Home</Link>
-                            </li>
-                            <li>
-                                <Link to="/todo">To Do</Link>
-                            </li>
-                            <li>
-                                <Link to="/contact">Contact</Link>
-                            </li>
-                            <hr />
-                            <Routes>
-                                <Route exact path ="/" render={()=> {
-                                    return (
-                                        this.state.isUserAuthenticated ?
-                                        <redirect to="/home" /> :
-                                        <redirect to="/test1" />
-                                    )
-                                }}
-                                />
-                                <Route exact path="/" component={Home} />
-                                <Route exact path="/todo" component={Todo} />
-                                <Route exact path="/Contact" component={Contact} />
-                            </Routes>
-                        </ul>
-                    </div>
-                </Router>
-            </div>
-        );
-    }
+export default function App(){
+  return (
+    <Router>
+      <div className="App">
+      <Navbar />
+      <Switch>
+        <Route path='/' exact component={Home} />
+        <Route path='/todo' component={Todo} />
+        <Route path='/contact' component={Contact} />
+      </Switch>
+      </div>
+    </Router>
+  );
 }
-
-
-export default App

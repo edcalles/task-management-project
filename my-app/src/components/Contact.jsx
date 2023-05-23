@@ -1,3 +1,12 @@
 import React from 'react'
 
-export default Contact => <div>This is the Contact Component</div>
+export default function Contact() {
+    return (
+        <div>
+            <h3>Contact</h3>
+            <div>
+                Please don't contact me
+            </div>
+        </div>
+    )
+}

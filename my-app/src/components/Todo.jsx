@@ -1,2 +1,14 @@
 import React from 'react'
-export default Todo => <div>This is the to do component</div>
+
+const Todo = ()=>{
+    return (
+        <div>
+            <h3>To Do List!</h3>
+            <div>
+                Make a silly list here!
+            </div>
+        </div>
+    )
+}
+
+export default Todo;
