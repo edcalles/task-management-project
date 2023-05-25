@@ -27,11 +27,11 @@ const Todo = () => {
  const handleInputdesc = (e) => {
    setinputDesc(e.target.value);
  };
- const handleClick = e => {
-    if (e.target.textDecoraction) {
-        e.target.removeProperty('text-decoration');
+ const handleClick = event => {
+    if (event.target.style.textDecoraction) {
+        event.target.style.removeProperty('text-decoration');
     } else {
-        e.target.setProperty('text-decoration', 'line-through')
+        event.target.style.setProperty('text-decoration', 'line-through')
     }
  }
  const handleSubmit = (e) => {
@@ -171,7 +171,7 @@ const Todo = () => {
            return (
              <div key={elem.id}>
                <div>
-                 <div>
+                 <div id="wrapper">
                    <h4>{elem.name}</h4>
                    <p>{elem.desc}</p>
                  </div>
@@ -185,7 +185,9 @@ const Todo = () => {
                    ) : (
                      ""
                    )}
-                   <button onClick={() => handleClick(elem.id)}>Done!</button>
+                   <br/>
+                   <label>finished task!</label>
+                   <input type="checkbox" />
                  </div>
                </div>
             
