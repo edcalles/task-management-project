@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #79E0EE;
 }
 
 code {
@@ -15,10 +16,10 @@ code {
   width: 100%;
   min-height: 10vh;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: center;
-  color: aliceblue;
-  background: dodgerblue;
+  color: #D0F5BE;
+  background: #98EECC;
   list-style-type: none;
 }
 .App .navbar .nav-links {
@@ -30,10 +31,13 @@ code {
 .logo {
   font-size: 30px;
   font-family: 'Times New Roman', Times, serif;
-  color: orange;
+  color: black;
   font-weight: bold;
   margin-right: 140px;
 }
 .homepage {
   text-align: center;
+}
+.container {
+  border: 1px solid black;
 }
